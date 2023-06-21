@@ -1,0 +1,64 @@
+{% load static %}
+{% load i18n%}
+<!-- ========== Left Sidebar Start ========== -->
+<div class="vertical-menu">
+
+    <div data-simplebar class="h-100">
+
+        <!--- Sidemenu -->
+        <div id="sidebar-menu">
+            <!-- Left Menu Start -->
+            <ul class="metismenu list-unstyled" id="side-menu">
+                <li class="menu-title">{% trans 'Main' %}</li>
+                <li>
+                    <a href="{% url 'admin-index' %}">
+                        <i class="mdi mdi-toolbox"></i>
+                        <span>{% trans 'Equipments' %}</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'admin-responsibles' %}">
+                        <i class="mdi mdi-account-box"></i>
+                        <span class="badge rounded-pill bg-success float-end">{{res_count}}</span>
+                        <span>{% trans 'Responsible Person' %}</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'admin-rooms' %}">
+                        <i class="mdi mdi-view-dashboard"></i>
+                        <span>{% trans 'Rooms' %}</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'admin-models' %}">
+                        <i class="mdi mdi-calendar-check"></i>
+                        <span class="badge rounded-pill bg-danger float-end">{{model_count}}</span>
+                        <span>{% trans 'Models' %}</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'admin-categories' %}">
+                        <i class="mdi mdi-clipboard-outline"></i>
+                        <span class="badge rounded-pill bg-info float-end">{{category_count}}</span>
+                        <span>{% trans 'Category' %}</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'unknown-devices' %}">
+                        <i class="mdi mdi-help-box"></i>
+                        <span> {% trans 'Unknown Devices' %} </span>
+                    </a>
+                </li>
+
+{#                <li>#}
+{#                    <a href="javascript: void(0);">#}
+{#                        <i class="mdi mdi-text-box-multiple-outline"></i>#}
+{#                        <span> Extra Pages </span>#}
+{#                    </a>#}
+{#                </li>#}
+            </ul>
+        </div>
+        <!-- Sidebar -->
+    </div>
+</div>
+<!-- Left Sidebar End -->
